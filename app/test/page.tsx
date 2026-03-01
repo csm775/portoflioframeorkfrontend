@@ -1,0 +1,1 @@
+import { roboto400, roboto700 } from "@/fonts/fonts";
