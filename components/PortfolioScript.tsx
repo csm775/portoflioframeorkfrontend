@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 export default function PortfolioScript() {
   useEffect(() => {
-    // ===================== Stats animation =====================
+   
     const stats = document.querySelectorAll<HTMLDivElement>('.stat__number');
 
     function animateStats() {
@@ -39,7 +39,7 @@ export default function PortfolioScript() {
       observer.observe(aboutSection);
     }
 
-    // ===================== Cursor =====================
+    
     const cursor = document.querySelector<HTMLDivElement>('.cursor');
     const cursorFollower = document.querySelector<HTMLDivElement>('.cursor-follower');
 
@@ -66,11 +66,11 @@ export default function PortfolioScript() {
         });
       });
 
-      // Cleanup cursor
+      
       return () => document.removeEventListener('mousemove', moveCursor);
     }
 
-    // ===================== Formulaire EmailJS =====================
+   
     const form = document.getElementById("contact-form") as HTMLFormElement | null;
 
     if (form) {
@@ -95,7 +95,7 @@ export default function PortfolioScript() {
 
       form.addEventListener("submit", handleSubmit);
 
-      // Cleanup formulaire
+      
       return () => {
         form.removeEventListener("submit", handleSubmit);
       };
